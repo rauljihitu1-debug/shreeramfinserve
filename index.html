@@ -1,53 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Ram FinServe | Insurance | RTO | Loan</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Ram Finserve</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-  <div class="brand">
-    <img src="logo.svg" alt="SR Logo">
-    <div>
-      <h1>Shree Ram FinServe</h1>
-      <p>Insurance | RTO | Loan Services</p>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-container">
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Anand, Gujarat, India</span>
+                <span><i class="fas fa-phone"></i> +91 98765 43210</span>
+                <span><i class="fas fa-envelope"></i> shreeramfinserve@gmail.com</span>
+            </div>
+            <div class="top-right">
+                <span>Working Hours: Mon - Sat (9:00 AM - 7:00 PM)</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <select id="lang">
-    <option value="en">English</option>
-    <option value="gu">ગુજરાતી</option>
-    <option value="hi">हिंदी</option>
-  </select>
-</header>
 
-<section class="hero">
-  <h2 id="title">Trusted Insurance, RTO & Loan Services</h2>
-  <p id="desc">Professional assistance for Insurance, RTO documentation and Loan guidance in Anand, Gujarat.</p>
-  <div class="buttons">
-    <a href="tel:6352576237" class="btn gold">Call Now</a>
-    <a href="https://wa.me/917621947125" class="btn green">WhatsApp</a>
-  </div>
-</section>
+    <!-- Main Header / Banner Area -->
+    <header class="hero-section">
+        <div class="language-switcher">
+            <span class="lang-title"><i class="fas fa-globe"></i> Language / ભાષા / भाषा</span>
+            <div class="lang-btns">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('hi')">हिंदी</button>
+                <button class="active" onclick="changeLanguage('gu')">ગુજરાતી</button>
+            </div>
+        </div>
 
-<section class="services">
-  <div class="card"><h3>Insurance</h3><p>Life, Health and Term insurance guidance.</p></div>
-  <div class="card"><h3>RTO</h3><p>Driving License, RC Transfer, NOC, Road Tax and more.</p></div>
-  <div class="card"><h3>Loan</h3><p>Personal, Home, Vehicle and Business loan assistance.</p></div>
-</section>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="logo-area">
+                    <div class="sr-logo">SR</div>
+                    <div class="logo-text">
+                        <h1>SHREE RAM</h1>
+                        <h2>FIN SERVE</h2>
+                        <p class="services-badge">RTO | INSURANCE | LOAN SERVICES</p>
+                    </div>
+                </div>
+                <p class="tagline" id="tagline-sub">સેવા અમારી, વિશ્વાસ આપકા</p>
+                <h3 class="main-heading" id="main-heading">દરેક કામ, સંપૂર્ણ ઈમાનદારી સાથે<br>તમારા દરેક કાર્ય માટે એક જ વિશ્વસનીય નામ</h3>
 
-<section class="contact">
-  <h3>Contact</h3>
-  <p>Anand, Gujarat</p>
-  <p>Call: 6352576237</p>
-  <p>WhatsApp: 7621947125</p>
-</section>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>100%</h4>
+                            <p id="f1">વિશ્વાસપાત્ર સેવા</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4 id="f2-title">સમયસર</h4>
+                            <p id="f2">ઝડપી કામ</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-user-check"></i>
+                        <div>
+                            <h4 id="f3-title">ગ્રાહક સંતોષ</h4>
+                            <p id="f3">અમારી પ્રાથમિકતા</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h4 id="f4-title">અનુભવી ટીમ</h4>
+                            <p id="f4">વ્યાવસાયિક માર્ગદર્શન</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<footer>
-  © 2026 Shree Ram FinServe
-</footer>
+            <!-- Floating Right Contact Widgets -->
+            <div class="floating-widgets">
+                <div class="widget-box">
+                    <i class="fab fa-whatsapp widget-icon"></i>
+                    <div>
+                        <small>WhatsApp</small>
+                        <p>Chat Now</p>
+                    </div>
+                </div>
+                <div class="widget-box">
+                    <i class="fas fa-phone-alt widget-icon"></i>
+                    <div>
+                        <small>Call Now</small>
+                        <p>98765 43210</p>
+                    </div>
+                </div>
+                <div class="widget-box">
+                    <i class="fas fa-map-marked-alt widget-icon"></i>
+                    <div>
+                        <small>Visit Office</small>
+                        <p>Get Direction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<script src="script.js"></script>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container services-grid">
+            
+            <!-- RTO Services -->
+            <div class="service-card navy">
+                <div class="card-header">
+                    <div class="icon-circle"><i class="fas fa-id-card"></i></div>
+                    <div>
+                        <h3>RTO SERVICES</h3>
+                        <p class="sub-text" id="rto-sub">તમામ RTO કામ માટે</p>
+                    </div>
+                </div>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="r1">Driving License (DL)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r2">Road Tax Payment</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r3">Vehicle Registration</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r4">NOC Services</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r5">Ownership Transfer</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r6">All RTO Works</span></li>
+                </ul>
+                <button class="btn btn-navy" id="btn-rto">View All Services &rarr;</button>
+            </div>
+
+            <!-- Insurance Services -->
+            <div class="service-card green">
+                <div class="card-header">
+                    <div class="icon-circle"><i class="fas fa-umbrella"></i></div>
+                    <div>
+                        <h3>INSURANCE SERVICES</h3>
+                        <p class="sub-text" id="ins-sub">સુરક્ષા તમારા જીવનની</p>
+                    </div>
+                </div>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="i1">Vehicle Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i2">Two Wheeler Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i3">Health Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i4">Commercial Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i5">Life Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i6">Insurance Renewal</span></li>
+                </ul>
+                <button class="btn btn-green" id="btn-ins">View All Services &rarr;</button>
+            </div>
+
+            <!-- Loan Services -->
+            <div class="service-card orange">
+                <div class="card-header">
+                    <div class="icon-circle"><i class="fas fa-rupee-sign"></i></div>
+                    <div>
+                        <h3>LOAN SERVICES</h3>
+                        <p class="sub-text" id="loan-sub">તમારા સપના, અમારી સાથે</p>
+                    </div>
+                </div>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="l1">Personal Loan</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l2">Two Wheeler Loan</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l3">Business Loan</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l4">Loan Against Insurance</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l5">Home Loan</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l6">Easy Loan Process</span></li>
+                </ul>
+                <button class="btn btn-orange" id="btn-loan">View All Services &rarr;</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>1000+</h3>
+                    <p id="s1">Happy Customers</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-file-alt"></i>
+                <div>
+                    <h3>5000+</h3>
+                    <p id="s2">Work Completed</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-history"></i>
+                <div>
+                    <h3>5+</h3>
+                    <p id="s3">Years Experience</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-handshake"></i>
+                <div>
+                    <h3>100%</h3>
+                    <p id="s4">Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Mantra Bar -->
+    <footer class="bottom-bar">
+        <p><i class="fas fa-hands-praying"></i> || શ્રી રામ || <span id="bottom-text">હમારા ઉદ્દેશ્ય હે - આપકો સમય પર, સહી ઓર ભરોસેમંદ સેવા દેના।</span></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
