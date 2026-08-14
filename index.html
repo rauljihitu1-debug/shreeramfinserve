@@ -3,220 +3,1328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Ram Finserve</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Shree Ram Finserve | RTO, Insurance & Loan Services Anand</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-navy: #0A192F;
+            --secondary-navy: #112240;
+            --accent-gold: #D4AF37;
+            --accent-saffron: #FF8C00;
+            --saffron-light: #FFF8EE;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --green-trust: #16A34A;
+            --card-shadow: 0 12px 30px rgba(10, 25, 47, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Noto Sans Gujarati', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #F8FAFC;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Announcement / Contact Bar */
+        .top-header {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #E2E8F0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .top-right-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .badge-24h {
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        /* Main Navbar & Hero Header */
+        .main-header {
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        /* Brand Logo Design */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .sr-emblem {
+            width: 58px;
+            height: 58px;
+            background: linear-gradient(135deg, #112240, #0A192F);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .sr-emblem span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            background: linear-gradient(135deg, #FFF, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .brand-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--primary-navy);
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text h1 span {
+            color: var(--accent-saffron);
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Language Switcher Component */
+        .lang-switch-box {
+            display: flex;
+            align-items: center;
+            background: #F1F5F9;
+            padding: 4px;
+            border-radius: 30px;
+            border: 1px solid #CBD5E1;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-navy);
+            color: var(--accent-gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Devotional Hero Section with Shree Ram Background */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(180deg, rgba(10, 25, 47, 0.82) 0%, rgba(10, 25, 47, 0.92) 100%), 
+                        url('https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            color: white;
+            padding: 80px 0 100px;
+            overflow: hidden;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .trust-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--accent-gold);
+            color: #FFE699;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-title span {
+            color: #FFC048;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #E2E8F0;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Trust Points Highlights */
+        .trust-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .tf-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 16px;
+            border-radius: 8px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tf-item i {
+            color: var(--accent-gold);
+            font-size: 20px;
+        }
+
+        .tf-item p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #FFF;
+        }
+
+        /* Hero Action Buttons */
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-gold {
+            background: linear-gradient(135deg, #FF8C00, #D4AF37);
+            color: #0A192F;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background: #20BA5A;
+        }
+
+        /* Quick Lead Booking Form Box */
+        .lead-card {
+            background: #FFFFFF;
+            color: var(--text-dark);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--accent-saffron);
+        }
+
+        .lead-card h3 {
+            font-size: 20px;
+            color: var(--primary-navy);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .lead-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-saffron);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary-navy);
+            color: var(--accent-gold);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-navy);
+        }
+
+        /* Counter Bar Section */
+        .stats-section {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-wrapper {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .stat-box {
+            text-align: center;
+            border-right: 1px solid #F1F5F9;
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-box i {
+            font-size: 32px;
+            color: var(--accent-saffron);
+            margin-bottom: 10px;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-navy);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* Services Grid Section */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-subtitle {
+            color: var(--accent-saffron);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--primary-navy);
+            font-weight: 800;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 35px 25px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #F1F5F9;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
+        }
+
+        .card-accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+        }
+
+        .rto-card .card-accent-line { background: #2563EB; }
+        .ins-card .card-accent-line { background: #16A34A; }
+        .loan-card .card-accent-line { background: #D97706; }
+
+        .service-icon-box {
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .rto-card .service-icon-box { background: #EFF6FF; color: #2563EB; }
+        .ins-card .service-icon-box { background: #F0FDF4; color: #16A34A; }
+        .loan-card .service-icon-box { background: #FEF3C7; color: #D97706; }
+
+        .service-card h3 {
+            font-size: 22px;
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .service-card .card-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .service-list li {
+            font-size: 14px;
+            color: var(--text-dark);
+            padding: 8px 0;
+            border-bottom: 1px dashed #F1F5F9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list li i {
+            color: var(--green-trust);
+            font-size: 14px;
+        }
+
+        .card-action-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+            text-decoration: none;
+        }
+
+        .rto-btn { background: #2563EB; color: white; }
+        .ins-btn { background: #16A34A; color: white; }
+        .loan-btn { background: #D97706; color: white; }
+
+        /* Genuine Trust Banner */
+        .trust-banner-section {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
+            color: white;
+            padding: 60px 0;
+            border-radius: 20px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .trust-badges-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tb-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .tb-box i {
+            font-size: 24px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .tb-box h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .tb-box p {
+            font-size: 12px;
+            color: #94A3B8;
+        }
+
+        /* Office Location & Contact Details */
+        .location-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-row i {
+            width: 40px;
+            height: 40px;
+            background: var(--saffron-light);
+            color: var(--accent-saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-text h5 {
+            font-size: 15px;
+            color: var(--primary-navy);
+            margin-bottom: 2px;
+        }
+
+        .info-text p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Devotional Quote Bar */
+        .bottom-mantra {
+            background: #FFFDF5;
+            border-top: 2px solid var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 15px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #854D0E;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: #94A3B8;
+            padding: 50px 0 20px;
+            font-size: 13px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Floating Call/WhatsApp Quick Actions */
+        .floating-action-buttons {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-wa { background: #25D366; }
+        .float-call { background: var(--accent-saffron); }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid, .services-grid, .trust-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stat-box {
+                border-right: none;
+                border-bottom: 1px solid #F1F5F9;
+                padding-bottom: 15px;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .trust-features, .trust-badges-list {
+                grid-template-columns: 1fr;
+            }
+            .top-flex {
+                justify-content: center;
+                text-align: center;
+            }
+            .stats-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container top-container">
-            <div class="contact-info">
-                <span><i class="fas fa-map-marker-alt"></i> Anand, Gujarat, India</span>
-                <span><i class="fas fa-phone"></i> +91 98765 43210</span>
-                <span><i class="fas fa-envelope"></i> shreeramfinserve@gmail.com</span>
+    <!-- Top Contact Header -->
+    <div class="top-header">
+        <div class="container top-flex">
+            <div class="contact-links">
+                <a href="tel:7621947125"><i class="fas fa-phone-alt"></i> 7621947125</a>
+                <a href="tel:6352576237"><i class="fas fa-phone-alt"></i> 6352576237</a>
+                <a href="https://maps.google.com/?q=Anand+Gujarat" target="_blank"><i class="fas fa-location-dot"></i> <span id="top-loc">આણંદ, ગુજરાત</span></a>
             </div>
-            <div class="top-right">
-                <span>Working Hours: Mon - Sat (9:00 AM - 7:00 PM)</span>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            <div class="top-right-info">
+                <span id="working-hours"><i class="far fa-clock"></i> સમય: સવારે 10:00 થી સાંજે 8:00</span>
+                <span class="badge-24h"><i class="fas fa-headset"></i> <span id="badge-24-txt">24/7 હેલ્પલાઇન</span></span>
             </div>
         </div>
     </div>
 
-    <!-- Main Header / Banner Area -->
-    <header class="hero-section">
-        <div class="language-switcher">
-            <span class="lang-title"><i class="fas fa-globe"></i> Language / ભાષા / भाषा</span>
-            <div class="lang-btns">
-                <button onclick="changeLanguage('en')">English</button>
-                <button onclick="changeLanguage('hi')">हिंदी</button>
-                <button class="active" onclick="changeLanguage('gu')">ગુજરાતી</button>
-            </div>
-        </div>
+    <!-- Main Navigation Bar -->
+    <header class="main-header">
+        <div class="container nav-flex">
+            <!-- SR Logo -->
+            <a href="#" class="brand-logo">
+                <div class="sr-emblem">
+                    <span>SR</span>
+                </div>
+                <div class="brand-text">
+                    <h1>SHREE RAM <span>FINSERVE</span></h1>
+                    <p id="brand-tag">RTO | INSURANCE | LOAN SERVICES</p>
+                </div>
+            </a>
 
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="logo-area">
-                    <div class="sr-logo">SR</div>
-                    <div class="logo-text">
-                        <h1>SHREE RAM</h1>
-                        <h2>FIN SERVE</h2>
-                        <p class="services-badge">RTO | INSURANCE | LOAN SERVICES</p>
-                    </div>
-                </div>
-                <p class="tagline" id="tagline-sub">સેવા અમારી, વિશ્વાસ આપકા</p>
-                <h3 class="main-heading" id="main-heading">દરેક કામ, સંપૂર્ણ ઈમાનદારી સાથે<br>તમારા દરેક કાર્ય માટે એક જ વિશ્વસનીય નામ</h3>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <h4>100%</h4>
-                            <p id="f1">વિશ્વાસપાત્ર સેવા</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4 id="f2-title">સમયસર</h4>
-                            <p id="f2">ઝડપી કામ</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-user-check"></i>
-                        <div>
-                            <h4 id="f3-title">ગ્રાહક સંતોષ</h4>
-                            <p id="f3">અમારી પ્રાથમિકતા</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-award"></i>
-                        <div>
-                            <h4 id="f4-title">અનુભવી ટીમ</h4>
-                            <p id="f4">વ્યાવસાયિક માર્ગદર્શન</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Floating Right Contact Widgets -->
-            <div class="floating-widgets">
-                <div class="widget-box">
-                    <i class="fab fa-whatsapp widget-icon"></i>
-                    <div>
-                        <small>WhatsApp</small>
-                        <p>Chat Now</p>
-                    </div>
-                </div>
-                <div class="widget-box">
-                    <i class="fas fa-phone-alt widget-icon"></i>
-                    <div>
-                        <small>Call Now</small>
-                        <p>98765 43210</p>
-                    </div>
-                </div>
-                <div class="widget-box">
-                    <i class="fas fa-map-marked-alt widget-icon"></i>
-                    <div>
-                        <small>Visit Office</small>
-                        <p>Get Direction</p>
-                    </div>
-                </div>
+            <!-- Language Switcher -->
+            <div class="lang-switch-box">
+                <button class="lang-btn active" onclick="setLanguage('gu', this)">ગુજરાતી</button>
+                <button class="lang-btn" onclick="setLanguage('en', this)">English</button>
+                <button class="lang-btn" onclick="setLanguage('hi', this)">हिंदी</button>
             </div>
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container services-grid">
-            
-            <!-- RTO Services -->
-            <div class="service-card navy">
-                <div class="card-header">
-                    <div class="icon-circle"><i class="fas fa-id-card"></i></div>
-                    <div>
-                        <h3>RTO SERVICES</h3>
-                        <p class="sub-text" id="rto-sub">તમામ RTO કામ માટે</p>
+    <!-- Devotional Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="trust-tag">
+                    <i class="fas fa-certificate"></i>
+                    <span id="hero-badge">100% ગેરંટીડ અને વિશ્વાસપાત્ર સેવા</span>
+                </div>
+                <h2 class="hero-title" id="hero-title-txt">
+                    દરેક કામ, સંપૂર્ણ ઈમાનદારી સાથે<br>
+                    <span>તમારા દરેક કાર્ય માટે એક જ નામ</span>
+                </h2>
+                <p class="hero-subtitle" id="hero-sub-txt">
+                    આણંદમાં RTO સેવાઓ, તમામ પ્રકારના ઈન્સ્યોરન્સ અને કોઈપણ લોન માટે સૌથી ઝડપી અને ભરોસાપાત્ર માર્ગદર્શન.
+                </p>
+
+                <!-- Key Highlights -->
+                <div class="trust-features">
+                    <div class="tf-item">
+                        <i class="fas fa-clock"></i>
+                        <p id="tf-1">સવારે 10 થી સાંજે 8 સેવા</p>
+                    </div>
+                    <div class="tf-item">
+                        <i class="fas fa-user-shield"></i>
+                        <p id="tf-2">24 કલાક ઈમરજન્સી સપોર્ટ</p>
+                    </div>
+                    <div class="tf-item">
+                        <i class="fas fa-file-signature"></i>
+                        <p id="tf-3">સરળ અને ઝડપી પેપરવર્ક</p>
+                    </div>
+                    <div class="tf-item">
+                        <i class="fas fa-star"></i>
+                        <p id="tf-4">4.9/5 ગ્રાહક રેટિંગ્સ</p>
                     </div>
                 </div>
-                <ul class="service-list">
-                    <li><i class="fas fa-check"></i> <span id="r1">Driving License (DL)</span></li>
-                    <li><i class="fas fa-check"></i> <span id="r2">Road Tax Payment</span></li>
-                    <li><i class="fas fa-check"></i> <span id="r3">Vehicle Registration</span></li>
-                    <li><i class="fas fa-check"></i> <span id="r4">NOC Services</span></li>
-                    <li><i class="fas fa-check"></i> <span id="r5">Ownership Transfer</span></li>
-                    <li><i class="fas fa-check"></i> <span id="r6">All RTO Works</span></li>
-                </ul>
-                <button class="btn btn-navy" id="btn-rto">View All Services &rarr;</button>
-            </div>
 
-            <!-- Insurance Services -->
-            <div class="service-card green">
-                <div class="card-header">
-                    <div class="icon-circle"><i class="fas fa-umbrella"></i></div>
-                    <div>
-                        <h3>INSURANCE SERVICES</h3>
-                        <p class="sub-text" id="ins-sub">સુરક્ષા તમારા જીવનની</p>
-                    </div>
+                <!-- Action Buttons -->
+                <div class="hero-btns">
+                    <a href="tel:7621947125" class="btn-primary-gold" id="btn-call-now">
+                        <i class="fas fa-phone-alt"></i> સીધો સંપર્ક કરો
+                    </a>
+                    <a href="https://wa.me/917621947125?text=હેલો,%20મને%20માહિતી%20જોઈએ%20છે." target="_blank" class="btn-whatsapp" id="btn-wa-now">
+                        <i class="fab fa-whatsapp"></i> વોટ્સએપ મેસેજ કરો
+                    </a>
                 </div>
-                <ul class="service-list">
-                    <li><i class="fas fa-check"></i> <span id="i1">Vehicle Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="i2">Two Wheeler Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="i3">Health Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="i4">Commercial Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="i5">Life Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="i6">Insurance Renewal</span></li>
-                </ul>
-                <button class="btn btn-green" id="btn-ins">View All Services &rarr;</button>
             </div>
 
-            <!-- Loan Services -->
-            <div class="service-card orange">
-                <div class="card-header">
-                    <div class="icon-circle"><i class="fas fa-rupee-sign"></i></div>
-                    <div>
-                        <h3>LOAN SERVICES</h3>
-                        <p class="sub-text" id="loan-sub">તમારા સપના, અમારી સાથે</p>
+            <!-- Quick Inquiry Card -->
+            <div class="lead-card">
+                <h3 id="form-heading">મફત સલાહ મેળવો</h3>
+                <p id="form-subheading">તમારી જરૂરિયાત મોકલો, અમે તરત જ સંપર્ક કરીશું.</p>
+                <form onsubmit="handleInquiry(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="input-name" placeholder="તમારું પૂરૂ નામ" required>
                     </div>
-                </div>
-                <ul class="service-list">
-                    <li><i class="fas fa-check"></i> <span id="l1">Personal Loan</span></li>
-                    <li><i class="fas fa-check"></i> <span id="l2">Two Wheeler Loan</span></li>
-                    <li><i class="fas fa-check"></i> <span id="l3">Business Loan</span></li>
-                    <li><i class="fas fa-check"></i> <span id="l4">Loan Against Insurance</span></li>
-                    <li><i class="fas fa-check"></i> <span id="l5">Home Loan</span></li>
-                    <li><i class="fas fa-check"></i> <span id="l6">Easy Loan Process</span></li>
-                </ul>
-                <button class="btn btn-orange" id="btn-loan">View All Services &rarr;</button>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="input-phone" placeholder="મોબાઈલ નંબર" required pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="select-service">
+                            <option value="RTO">RTO સેવાની જરૂર છે</option>
+                            <option value="Insurance">ઈન્સ્યોરન્સ / વીમો</option>
+                            <option value="Loan">લોન સર્વિસ</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn" id="btn-submit-inquiry">સબમિટ કરો (Submit)</button>
+                </form>
             </div>
-
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <i class="fas fa-users"></i>
-                <div>
-                    <h3>1000+</h3>
-                    <p id="s1">Happy Customers</p>
-                </div>
+    <!-- Stats Section -->
+    <div class="container stats-section">
+        <div class="stats-wrapper">
+            <div class="stat-box">
+                <i class="fas fa-smile-beam"></i>
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label" id="st-1">સંતોષકારક ગ્રાહકો</div>
             </div>
-            <div class="stat-item">
-                <i class="fas fa-file-alt"></i>
-                <div>
-                    <h3>5000+</h3>
-                    <p id="s2">Work Completed</p>
-                </div>
+            <div class="stat-box">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label" id="st-2">સફળતાપૂર્વક કામ પૂરું</div>
             </div>
-            <div class="stat-item">
-                <i class="fas fa-history"></i>
-                <div>
-                    <h3>5+</h3>
-                    <p id="s3">Years Experience</p>
-                </div>
+            <div class="stat-box">
+                <i class="fas fa-award"></i>
+                <div class="stat-number">10+</div>
+                <div class="stat-label" id="st-3">વર્ષોનો અનુભવ</div>
             </div>
-            <div class="stat-item">
-                <i class="fas fa-handshake"></i>
+            <div class="stat-box">
+                <i class="fas fa-shield-alt"></i>
+                <div class="stat-number">100%</div>
+                <div class="stat-label" id="st-4">વિશ્વાસ અને પારદર્શિતા</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Services Section -->
+    <section class="section-padding container">
+        <div class="section-header">
+            <span class="section-subtitle" id="sec-sub">અમારી મુખ્ય સેવાઓ</span>
+            <h2 class="section-title" id="sec-title">તમામ નાણાકીય અને RTO ઉકેલ એક જ જગ્યાએ</h2>
+        </div>
+
+        <div class="services-grid">
+            <!-- 1. RTO Services -->
+            <div class="service-card rto-card">
+                <div class="card-accent-line"></div>
+                <div class="service-icon-box">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <h3 id="card1-title">RTO સેવાઓ (RTO Works)</h3>
+                <p class="card-desc" id="card1-desc">તમામ પ્રકારના સરકારી અને RTO સંબંધિત કામકાજનું ઝડપી સોલ્યુશન.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="r-list-1">ડ્રાઇવિંગ લાઇસન્સ (New DL & Renewal)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r-list-2">વાહન રજીસ્ટ્રેશન (RC Book Works)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r-list-3">ઓનરશિપ ટ્રાન્સફર (Name Transfer)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r-list-4">NOC તથા સ્ટેટ પાસિંગ સેવા</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r-list-5">રોડ ટેક્સ ચુકવણી અને HSRP નંબર પ્લેટ</span></li>
+                    <li><i class="fas fa-check"></i> <span id="r-list-6">તમામ RTO લગતા અન્ય કામકાજ</span></li>
+                </ul>
+                <a href="https://wa.me/917621947125?text=મને%20RTO%20સર્વિસ%20વિશે%20માહિતી%20જોઈએ%20છે." class="card-action-btn rto-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="btn-card-text">જરૂરિયાત મોકલો</span>
+                </a>
+            </div>
+
+            <!-- 2. Insurance Services -->
+            <div class="service-card ins-card">
+                <div class="card-accent-line"></div>
+                <div class="service-icon-box">
+                    <i class="fas fa-umbrella"></i>
+                </div>
+                <h3 id="card2-title">ઈન્સ્યોરન્સ સેવાઓ (Insurance)</h3>
+                <p class="card-desc" id="card2-desc">તમારી સંપત્તિ અને પરિવારની સુરક્ષા માટે શ્રેષ્ઠ વીમા પોલિસી.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="i-list-1">ટુ વ્હીલર અને ફોર વ્હીલર વીમો</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i-list-2">કોમર્શિયલ વ્હીકલ ઈન્સ્યોરન્સ</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i-list-3">હેલ્થ ઈન્સ્યોરન્સ (Health Insurance)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i-list-4">લાઈફ ઈન્સ્યોરન્સ (Life Insurance)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i-list-5">ઈન્સ્ટન્ટ પોલિસી રીન્યુઅલ (Renewal)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="i-list-6">ક્લેમ સપોર્ટ અને માર્ગદર્શન</span></li>
+                </ul>
+                <a href="https://wa.me/917621947125?text=મને%20ઈન્સ્યોરન્સ%20વિશે%20માહિતી%20જોઈએ%20છે." class="card-action-btn ins-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="btn-card-text">જરૂરિયાત મોકલો</span>
+                </a>
+            </div>
+
+            <!-- 3. Loan Services -->
+            <div class="service-card loan-card">
+                <div class="card-accent-line"></div>
+                <div class="service-icon-box">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                </div>
+                <h3 id="card3-title">લોન સેવાઓ (Loan Services)</h3>
+                <p class="card-desc" id="card3-desc">ઓછા વ્યાજદરે અને ઓછાં ડોક્યુમેન્ટ સાથે ઝડપી લોન મંજૂરી.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> <span id="l-list-1">પર્સનલ લોન (Personal Loan)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l-list-2">બિઝનેસ લોન (Business Loan)</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l-list-3">ટુ વ્હીલર અને કાર લોન</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l-list-4">હોમ લોન અને મોર્ગેજ લોન</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l-list-5">ઈન્સ્યોરન્સ પર લોન સોલ્યુશન</span></li>
+                    <li><i class="fas fa-check"></i> <span id="l-list-6">સરળ હપ્તા અને ઝડપી પ્રોસેસિંગ</span></li>
+                </ul>
+                <a href="https://wa.me/917621947125?text=મને%20લોન%20સર્વિસ%20વિશે%20માહિતી%20જોઈએ%20છે." class="card-action-btn loan-btn">
+                    <i class="fab fa-whatsapp"></i> <span class="btn-card-text">જરૂરિયાત મોકલો</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Verification Section -->
+    <div class="container">
+        <div class="trust-banner-section">
+            <div class="container trust-grid">
                 <div>
-                    <h3>100%</h3>
-                    <p id="s4">Customer Satisfaction</p>
+                    <h2 style="font-size: 28px; margin-bottom: 15px;" id="tb-main-title">શા માટે શ્રી રામ ફિનસર્વ પર ભરોસો કરવો?</h2>
+                    <p style="color: #CBD5E1; font-size: 15px;" id="tb-main-desc">
+                        અમે અમારા દરેક ગ્રાહકને સંપૂર્ણ ઈમાનદારી, પારદર્શક વ્યવહાર અને ઝડપી કામગીરીની ખાતરી આપીએ છીએ.
+                    </p>
+                    <div class="trust-badges-list">
+                        <div class="tb-box">
+                            <i class="fas fa-user-check"></i>
+                            <h4 id="tb1-h">100% ઓથેન્ટિક સેવા</h4>
+                            <p id="tb1-p">નિયમો અને કાયદા મુજબ કામગીરી</p>
+                        </div>
+                        <div class="tb-box">
+                            <i class="fas fa-bolt"></i>
+                            <h4 id="tb2-h">ઝડપી પ્રોસેસિંગ</h4>
+                            <p id="tb2-p">ઓછા સમયમાં કામ પૂરું કરવું</p>
+                        </div>
+                        <div class="tb-box">
+                            <i class="fas fa-handshake"></i>
+                            <h4 id="tb3-h">વાજબી ફી</h4>
+                            <p id="tb3-p">કોઈ છૂપો ખર્ચ નહીં</p>
+                        </div>
+                        <div class="tb-box">
+                            <i class="fas fa-headset"></i>
+                            <h4 id="tb4-h">24/7 હેલ્પલાઇન</h4>
+                            <p id="tb4-p">તમામ પ્રશ્નોનું ત્વરિત નિરાકરણ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Contact Information -->
+                <div class="location-card">
+                    <h3 style="font-size: 22px; color: var(--primary-navy); margin-bottom: 20px;" id="loc-heading">અમારી ઓફિસ અને સંપર્ક</h3>
+                    
+                    <div class="info-row">
+                        <i class="fas fa-location-dot"></i>
+                        <div class="info-text">
+                            <h5 id="loc-1-title">ઓફિસ સરનામું</h5>
+                            <p id="loc-1-desc">આણંદ, ગુજરાત (Anand, Gujarat, India)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h5 id="loc-2-title">મોબાઈલ નંબર (સંપર્ક)</h5>
+                            <p><strong>+91 76219 47125</strong></p>
+                            <p><strong>+91 63525 76237</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-text">
+                            <h5 id="loc-3-title">ઓફિસ સમય</h5>
+                            <p id="loc-3-desc">સવારે 10:00 થી સાંજે 8:00 (સોમવાર થી શનિવાર)</p>
+                            <p style="color: var(--green-trust); font-weight: 600;" id="loc-3-sub">24 Hours ઇમરજન્સી હેલ્પલાઇન ઉપલબ્ધ</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bottom Mantra Bar -->
-    <footer class="bottom-bar">
-        <p><i class="fas fa-hands-praying"></i> || શ્રી રામ || <span id="bottom-text">હમારા ઉદ્દેશ્ય હે - આપકો સમય પર, સહી ઓર ભરોસેમંદ સેવા દેના।</span></p>
+    <!-- Devotional Bottom Banner -->
+    <div class="bottom-mantra">
+        <div class="container">
+            <i class="fas fa-hands-praying"></i> || શ્રી રામ || - <span id="mantra-text">અમારો ઉદ્દેશ્ય છે: તમને સમયસર, સાચી અને ભરોસાપાત્ર સેવા આપવી.</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>SHREE RAM FINSERVE</h2>
+                <p style="line-height: 1.7; margin-bottom: 15px;" id="ft-about">
+                    આણંદ, ગુજરાતમાં તમામ RTO કામકાજ, વાહન તથા હેલ્થ ઈન્સ્યોરન્સ અને પર્સનલ/બિઝનેસ લોન માટેની સૌથી વિશ્વસનીય એજન્સી.
+                </p>
+                <div style="color: var(--accent-gold); font-size: 16px;">
+                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> (4.9/5)
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 id="ft-links-title">ઝડપી લિંક્સ</h4>
+                <ul>
+                    <li><a href="tel:7621947125">RTO સેવાઓ</a></li>
+                    <li><a href="tel:7621947125">ઈન્સ્યોરન્સ સેવાઓ</a></li>
+                    <li><a href="tel:7621947125">લોન સેવાઓ</a></li>
+                    <li><a href="tel:7621947125">સંપર્ક કરો</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 id="ft-contact-title">સંપર્ક વિગત</h4>
+                <p><i class="fas fa-phone-alt"></i> 7621947125 / 6352576237</p>
+                <p><i class="fas fa-location-dot"></i> આણંદ, ગુજરાત</p>
+                <p><i class="fas fa-clock"></i> સવારે 10:00 થી સાંજે 8:00</p>
+            </div>
+        </div>
+        
+        <div class="copyright-bar">
+            <p>&copy; 2026 Shree Ram Finserve. All Rights Reserved. Designed for Trust & Service.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Floating Quick Action Buttons -->
+    <div class="floating-action-buttons">
+        <a href="https://wa.me/917621947125?text=જય%20શ્રી%20રામ,%20મને%20માહિતી%20આપો." target="_blank" class="float-btn float-wa" title="WhatsApp Chat">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:7621947125" class="float-btn float-call" title="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Translation Engine -->
+    <script>
+        const translations = {
+            gu: {
+                topLoc: "આણંદ, ગુજરાત",
+                workingHours: "<i class='far fa-clock'></i> સમય: સવારે 10:00 થી સાંજે 8:00",
+                badge24: "24/7 હેલ્પલાઇન",
+                brandTag: "RTO | INSURANCE | LOAN SERVICES",
+                heroBadge: "100% ગેરંટીડ અને વિશ્વાસપાત્ર સેવા",
+                heroTitle: "દરેક કામ, સંપૂર્ણ ઈમાનદારી સાથે<br><span>તમારા દરેક કાર્ય માટે એક જ નામ</span>",
+                heroSub: "આણંદમાં RTO સેવાઓ, તમામ પ્રકારના ઈન્સ્યોરન્સ અને કોઈપણ લોન માટે સૌથી ઝડપી અને ભરોસાપાત્ર માર્ગદર્શન.",
+                tf1: "સવારે 10 થી સાંજે 8 સેવા",
+                tf2: "24 કલાક ઈમરજન્સી સપોર્ટ",
+                tf3: "સરળ અને ઝડપી પેપરવર્ક",
+                tf4: "4.9/5 ગ્રાહક રેટિંગ્સ",
+                btnCall: "<i class='fas fa-phone-alt'></i> સીધો સંપર્ક કરો",
+                btnWa: "<i class='fab fa-whatsapp'></i> વોટ્સએપ મેસેજ કરો",
+                formHead: "મફત સલાહ મેળવો",
+                formSubHead: "તમારી જરૂરિયાત મોકલો, અમે તરત જ સંપર્ક કરીશું.",
+                btnSubmit: "સબમિટ કરો (Submit)",
+                st1: "સંતોષકારક ગ્રાહકો", st2: "સફળતાપૂર્વક કામ પૂરું", st3: "વર્ષોનો અનુભવ", st4: "વિશ્વાસ અને પારદર્શિતા",
+                secSub: "અમારી મુખ્ય સેવાઓ", secTitle: "તમામ નાણાકીય અને RTO ઉકેલ એક જ જગ્યાએ",
+                card1Title: "RTO સેવાઓ (RTO Works)", card1Desc: "તમામ પ્રકારના સરકારી અને RTO સંબંધિત કામકાજનું ઝડપી સોલ્યુશન.",
+                r1: "ડ્રાઇવિંગ લાઇસન્સ (New DL & Renewal)", r2: "વાહન રજીસ્ટ્રેશન (RC Book Works)", r3: "ઓનરશિપ ટ્રાન્સફર (Name Transfer)", r4: "NOC તથા સ્ટેટ પાસિંગ સેવા", r5: "રોડ ટેક્સ ચુકવણી અને HSRP નંબર પ્લેટ", r6: "તમામ RTO લગતા અન્ય કામકાજ",
+                card2Title: "ઈન્સ્યોરન્સ સેવાઓ (Insurance)", card2Desc: "તમારી સંપત્તિ અને પરિવારની સુરક્ષા માટે શ્રેષ્ઠ વીમા પોલિસી.",
+                i1: "ટુ વ્હીલર અને ફોર વ્હીલર વીમો", i2: "કોમર્શિયલ વ્હીકલ ઈન્સ્યોરન્સ", i3: "હેલ્થ ઈન્સ્યોરન્સ (Health Insurance)", i4: "લાઈફ ઈન્સ્યોરન્સ (Life Insurance)", i5: "ઈન્સ્ટન્ટ પોલિસી રીન્યુઅલ (Renewal)", i6: "ક્લેમ સપોર્ટ અને માર્ગદર્શન",
+                card3Title: "લોન સેવાઓ (Loan Services)", card3Desc: "ઓછા વ્યાજદરે અને ઓછાં ડોક્યુમેન્ટ સાથે ઝડપી લોન મંજૂરી.",
+                l1: "પર્સનલ લોન (Personal Loan)", l2: "બિઝનેસ લોન (Business Loan)", l3: "ટુ વ્હીલર અને કાર લોન", l4: "હોમ લોન અને મોર્ગેજ લોન", l5: "ઈન્સ્યોરન્સ પર લોન સોલ્યુશન", l6: "સરળ હપ્તા અને ઝડપી પ્રોસેસિંગ",
+                btnCardText: "જરૂરિયાત મોકલો",
+                tbMainTitle: "શા માટે શ્રી રામ ફિનસર્વ પર ભરોસો કરવો?", tbMainDesc: "અમે અમારા દરેક ગ્રાહકને સંપૂર્ણ ઈમાનદારી, પારદર્શક વ્યવહાર અને ઝડપી કામગીરીની ખાતરી આપીએ છીએ.",
+                tb1H: "100% ઓથેન્ટિક સેવા", tb1P: "નિયમો અને કાયદા મુજબ કામગીરી",
+                tb2H: "ઝડપી પ્રોસેસિંગ", tb2P: "ઓછા સમયમાં કામ પૂરું કરવું",
+                tb3H: "વાજબી ફી", tb3P: "કોઈ છૂપો ખર્ચ નહીં",
+                tb4H: "24/7 હેલ્પલાઇન", tb4P: "તમામ પ્રશ્નોનું ત્વરિત નિરાકરણ",
+                locHead: "અમારી ઓફિસ અને સંપર્ક", loc1T: "ઓફિસ સરનામું", loc1D: "આણંદ, ગુજરાત (Anand, Gujarat, India)",
+                loc2T: "મોબાઈલ નંબર (સંપર્ક)", loc3T: "ઓફિસ સમય", loc3D: "સવારે 10:00 થી સાંજે 8:00 (સોમવાર થી શનિવાર)", loc3Sub: "24 Hours ઇમરજન્સી હેલ્પલાઇન ઉપલબ્ધ",
+                mantraText: "અમારો ઉદ્દેશ્ય છે: તમને સમયસર, સાચી અને ભરોસાપાત્ર સેવા આપવી.",
+                ftAbout: "આણંદ, ગુજરાતમાં તમામ RTO કામકાજ, વાહન તથા હેલ્થ ઈન્સ્યોરન્સ અને પર્સનલ/બિઝનેસ લોન માટેની સૌથી વિશ્વસનીય એજન્સી.",
+                ftLinks: "ઝડપી લિંક્સ", ftContact: "સંપર્ક વિગત"
+            },
+            en: {
+                topLoc: "Anand, Gujarat",
+                workingHours: "<i class='far fa-clock'></i> Hours: 10:00 AM to 8:00 PM",
+                badge24: "24/7 Helpline",
+                brandTag: "RTO | INSURANCE | LOAN SERVICES",
+                heroBadge: "100% Guaranteed & Trusted Service",
+                heroTitle: "Every Work With Absolute Honesty<br><span>One Trusted Name For All Your Needs</span>",
+                heroSub: "Fastest and most reliable guidance for RTO Services, All Types of Insurance & Loans in Anand.",
+                tf1: "10 AM to 8 PM Open",
+                tf2: "24 Hours Emergency Support",
+                tf3: "Easy & Quick Paperwork",
+                tf4: "4.9/5 Customer Rating",
+                btnCall: "<i class='fas fa-phone-alt'></i> Call Now Directly",
+                btnWa: "<i class='fab fa-whatsapp'></i> Send WhatsApp Message",
+                formHead: "Get Free Consultation",
+                formSubHead: "Send your request, we will contact you immediately.",
+                btnSubmit: "Submit Inquiry",
+                st1: "Happy Customers", st2: "Completed Projects", st3: "Years Experience", st4: "Trust & Transparency",
+                secSub: "OUR CORE SERVICES", secTitle: "All Financial & RTO Solutions At One Place",
+                card1Title: "RTO Services", card1Desc: "Complete government & RTO documentation solutions.",
+                r1: "Driving License (New DL & Renewal)", r2: "Vehicle Registration (RC Works)", r3: "Ownership Transfer (Name Transfer)", r4: "NOC & State Passing Work", r5: "Road Tax Payment & HSRP Number Plate", r6: "All Other RTO Related Works",
+                card2Title: "Insurance Services", card2Desc: "Best protection policies for your assets and family.",
+                i1: "Two Wheeler & Four Wheeler Insurance", i2: "Commercial Vehicle Insurance", i3: "Health Insurance", i4: "Life Insurance", i5: "Instant Policy Renewal", i6: "Complete Claim Assistance",
+                card3Title: "Loan Services", card3Desc: "Fast loan approval with low interest rates and minimal documentation.",
+                l1: "Personal Loan", l2: "Business Loan", l3: "Two Wheeler & Car Loan", l4: "Home Loan & Mortgage Loan", l5: "Loan Against Insurance", l6: "Easy EMIs & Quick Processing",
+                btnCardText: "Enquire Now",
+                tbMainTitle: "Why Choose Shree Ram Finserve?", tbMainDesc: "We assure complete honesty, transparent dealing, and fast execution for every client.",
+                tb1H: "100% Authentic Service", tb1P: "Strict compliance with rules",
+                tb2H: "Fast Processing", tb2P: "Quickest turnaround time",
+                tb3H: "Fair Charges", tb3P: "No hidden fees at all",
+                tb4H: "24/7 Helpline", tb4P: "Instant query resolution",
+                locHead: "Our Office & Contact", loc1T: "Office Address", loc1D: "Anand, Gujarat, India",
+                loc2T: "Mobile Numbers", loc3T: "Office Timings", loc3D: "10:00 AM to 8:00 PM (Mon - Sat)", loc3Sub: "24 Hours Emergency Support Available",
+                mantraText: "Our Goal: To deliver timely, honest, and reliable services to you.",
+                ftAbout: "The most trusted agency in Anand, Gujarat for all RTO documentation, Vehicle/Health Insurance, and Loans.",
+                ftLinks: "Quick Links", ftContact: "Contact Details"
+            },
+            hi: {
+                topLoc: "આણંદ, ગુજરાત",
+                workingHours: "<i class='far fa-clock'></i> સમય: સવારે 10:00 થી સાંજે 8:00",
+                badge24: "24/7 હેલ્પલાઇન",
+                brandTag: "RTO | INSURANCE | LOAN SERVICES",
+                heroBadge: "100% વિશ્વાસપાત્ર એવમ વિશ્વસનીય સેવા",
+                heroTitle: "હર કામ, પૂરી ઈમાનદારી કે સાથ<br><span>આપકે હર કામ કે લિયે એક હી નામ</span>",
+                heroSub: "આણંદ મેં RTO સેવાએં, સભી પ્રકાર કે બીમા ઓર લોન કે લિયે સબસે તેઝ ઓર ભરોસેમંદ માર્ગદર્શન.",
+                tf1: "સબહ 10 સે શામ 8 બજે તક",
+                tf2: "24 ઘંટે ઇમરજેન્સી સપોર્ટ",
+                tf3: "આસાન ઓર ઝડપી પેપરવર્ક",
+                tf4: "4.9/5 ગ્રાહક રેટિંગ",
+                btnCall: "<i class='fas fa-phone-alt'></i> સીધા સંપર્ક કરેં",
+                btnWa: "<i class='fab fa-whatsapp'></i> વોટ્સએપ મેસેજ કરેં",
+                formHead: "મુફ્ત સલાઇ લેં",
+                formSubHead: "અપની ઝરૂરત ભેજેં, હમ તુરંત સંપર્ક કરેંગે.",
+                btnSubmit: "સબમિટ કરેં (Submit)",
+                st1: "સંતોષજનક ગ્રાહક", st2: "પૂરે કિયે ગયે કામ", st3: "વર્ષોં કા અનુભવ", st4: "ભરોસા ઓર પારદર્શિતા",
+                secSub: "હમારી મુખ્ય સેવાએં", secTitle: "સભી ફાઇનાન્શિયલ ઓર RTO સોલ્યુશન એક હી જગહ",
+                card1Title: "RTO સેવાએં (RTO Works)", card1Desc: "સભી પ્રકાર કે સરકારી ઓર RTO કામોં કા ત્વરિત સોલ્યુશન.",
+                r1: "ડ્રાઇવિંગ લાઇસન્સ (New DL & Renewal)", r2: "વાહન પંજીકરણ (RC Book Works)", r3: "ઓનરશિપ ટ્રાન્સફર (Name Transfer)", r4: "NOC ઓર સ્ટેટ પાસિંગ સેવા", r5: "રોડ ટેક્સ ભુગતાન ઓર HSRP નંબર પ્લેટ", r6: "અન્ય સભી RTO સંબંધિત કામ",
+                card2Title: "બીમા સેવાએં (Insurance)", card2Desc: "આપકી સંપત્તિ ઓર પરિવાર કી સુરક્ષા કે લિયે સબસે બેહતર બીમા.",
+                i1: "ટૂ વ્હીલર ઓર ફોર વ્હીલર બીમા", i2: "કોમર્શિયલ વાહન બીમા", i3: "હેલ્થ ઈન્સ્યોરેન્સ (Health Insurance)", i4: "લાઈફ ઈન્સ્યોરેન્સ (Life Insurance)", i5: "તુરંત પોલિસી રિન્યુઅલ", i6: "ક્લેમ સપોર્ટ ઓર માર્ગદર્શન",
+                card3Title: "લોન સેવાએં (Loan Services)", card3Desc: "કમ બ્યાજ દર ઓર કમ ડોક્યુમેન્ટ કે સાથ ઝડપી લોન મંજૂરી.",
+                l1: "પર્સનલ લોન (Personal Loan)", l2: "બિઝનેસ લોન (Business Loan)", l3: "ટૂ વ્હીલર ઓર કાર લોન", l4: "હોમ લોન ઓર મોર્ગેજ લોન", l5: "ઈન્સ્યોરેન્સ પર લોન સોલ્યુશન", l6: "આસાન કિશ્તે ઓર તેઝ પ્રોસેસિંગ",
+                btnCardText: "ઝરૂરત ભેજેં",
+                tbMainTitle: "શ્રી રામ ફિનસર્વ પર ભરોસા ક્યોં કરેં?", tbMainDesc: "હમ હર ગ્રાહક કો પૂરી ઈમાનદારી, પારદર્શી વ્યવહાર ઓર તેઝ કામ કી ગારંટી દેતે હેં.",
+                tb1H: "100% ઓથેન્ટિક સેવા", tb1P: "નિયમ ઓર કાનૂન કે મુતાબિક કામ",
+                tb2H: "તેઝ પ્રોસેસિંગ", tb2P: "કમ સે કમ સમય મેં કામ",
+                tb3H: "વાજિબ ફીસ", tb3P: "કોઈ છિપા હુઆ ચાર્જ નહીં",
+                tb4H: "24/7 હેલ્પલાઇન", tb4P: "સભી સવાલોં કા તુરંત સોલ્યુશન",
+                locHead: "હમારા ઓફિસ ઓર સંપર્ક", loc1T: "ઓફિસ પતા", loc1D: "આણંદ, ગુજરાત (Anand, Gujarat, India)",
+                loc2T: "મોબાઈલ નંબર", loc3T: "ઓફિસ સમય", loc3D: "સબહ 10:00 સે શામ 8:00 (સોમવાર સે શનિવાર)", loc3Sub: "24 ઘંટે ઇમરજેન્સી હેલ્પલાઇન ઉપલબ્ધ",
+                mantraText: "હમારા ઉદ્દેશ્ય હે: આપકો સમય પર, સહી ઓર ભરોસેમંદ સેવા દેના।",
+                ftAbout: "આણંદ, ગુજરાત મેં સભી RTO કામ, વાહન/હેલ્થ બીમા ઓર લોન કે લિયે સબસે ભરોસેમંદ એજન્સી.",
+                ftLinks: "ક્વિક લિંક્સ", ftContact: "સંપર્ક વિવરણ"
+            }
+        };
+
+        function setLanguage(lang, btnElement) {
+            // Highlight active language button
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if(btnElement) btnElement.classList.add('active');
+
+            const t = translations[lang];
+            if(!t) return;
+
+            // Header & Hero Update
+            document.getElementById('top-loc').innerText = t.topLoc;
+            document.getElementById('working-hours').innerHTML = t.workingHours;
+            document.getElementById('badge-24-txt').innerText = t.badge24;
+            document.getElementById('brand-tag').innerText = t.brandTag;
+            document.getElementById('hero-badge').innerText = t.heroBadge;
+            document.getElementById('hero-title-txt').innerHTML = t.heroTitle;
+            document.getElementById('hero-sub-txt').innerText = t.heroSub;
+
+            // Trust highlights
+            document.getElementById('tf-1').innerText = t.tf1;
+            document.getElementById('tf-2').innerText = t.tf2;
+            document.getElementById('tf-3').innerText = t.tf3;
+            document.getElementById('tf-4').innerText = t.tf4;
+
+            document.getElementById('btn-call-now').innerHTML = t.btnCall;
+            document.getElementById('btn-wa-now').innerHTML = t.btnWa;
+
+            // Form
+            document.getElementById('form-heading').innerText = t.formHead;
+            document.getElementById('form-subheading').innerText = t.formSubHead;
+            document.getElementById('btn-submit-inquiry').innerText = t.btnSubmit;
+
+            // Stats
+            document.getElementById('st-1').innerText = t.st1;
+            document.getElementById('st-2').innerText = t.st2;
+            document.getElementById('st-3').innerText = t.st3;
+            document.getElementById('st-4').innerText = t.st4;
+
+            // Services Header
+            document.getElementById('sec-sub').innerText = t.secSub;
+            document.getElementById('sec-title').innerText = t.secTitle;
+
+            // Card 1 RTO
+            document.getElementById('card1-title').innerText = t.card1Title;
+            document.getElementById('card1-desc').innerText = t.card1Desc;
+            document.getElementById('r-list-1').innerText = t.r1;
+            document.getElementById('r-list-2').innerText = t.r2;
+            document.getElementById('r-list-3').innerText = t.r3;
+            document.getElementById('r-list-4').innerText = t.r4;
+            document.getElementById('r-list-5').innerText = t.r5;
+            document.getElementById('r-list-6').innerText = t.r6;
+
+            // Card 2 Insurance
+            document.getElementById('card2-title').innerText = t.card2Title;
+            document.getElementById('card2-desc').innerText = t.card2Desc;
+            document.getElementById('i-list-1').innerText = t.i1;
+            document.getElementById('i-list-2').innerText = t.i2;
+            document.getElementById('i-list-3').innerText = t.i3;
+            document.getElementById('i-list-4').innerText = t.i4;
+            document.getElementById('i-list-5').innerText = t.i5;
+            document.getElementById('i-list-6').innerText = t.i6;
+
+            // Card 3 Loan
+            document.getElementById('card3-title').innerText = t.card3Title;
+            document.getElementById('card3-desc').innerText = t.card3Desc;
+            document.getElementById('l-list-1').innerText = t.l1;
+            document.getElementById('l-list-2').innerText = t.l2;
+            document.getElementById('l-list-3').innerText = t.l3;
+            document.getElementById('l-list-4').innerText = t.l4;
+            document.getElementById('l-list-5').innerText = t.l5;
+            document.getElementById('l-list-6').innerText = t.l6;
+
+            // Card Button texts
+            document.querySelectorAll('.btn-card-text').forEach(el => el.innerText = t.btnCardText);
+
+            // Trust Banner
+            document.getElementById('tb-main-title').innerText = t.tbMainTitle;
+            document.getElementById('tb-main-desc').innerText = t.tbMainDesc;
+            document.getElementById('tb1-h').innerText = t.tb1H; document.getElementById('tb1-p').innerText = t.tb1P;
+            document.getElementById('tb2-h').innerText = t.tb2H; document.getElementById('tb2-p').innerText = t.tb2P;
+            document.getElementById('tb3-h').innerText = t.tb3H; document.getElementById('tb3-p').innerText = t.tb3P;
+            document.getElementById('tb4-h').innerText = t.tb4H; document.getElementById('tb4-p').innerText = t.tb4P;
+
+            // Location Section
+            document.getElementById('loc-heading').innerText = t.locHead;
+            document.getElementById('loc-1-title').innerText = t.loc1T; document.getElementById('loc-1-desc').innerText = t.loc1D;
+            document.getElementById('loc-2-title').innerText = t.loc2T;
+            document.getElementById('loc-3-title').innerText = t.loc3T; document.getElementById('loc-3-desc').innerText = t.loc3D; document.getElementById('loc-3-sub').innerText = t.loc3Sub;
+
+            // Mantra & Footer
+            document.getElementById('mantra-text').innerText = t.mantraText;
+            document.getElementById('ft-about').innerText = t.ftAbout;
+            document.getElementById('ft-links-title').innerText = t.ftLinks;
+            document.getElementById('ft-contact-title').innerText = t.ftContact;
+        }
+
+        function handleInquiry(e) {
+            e.preventDefault();
+            const name = document.getElementById('input-name').value;
+            const phone = document.getElementById('input-phone').value;
+            const service = document.getElementById('select-service').value;
+
+            const text = `નમસ્તે શ્રી રામ ફિનસર્વ,%0Aમારું નામ: ${name}%0Aમોબાઈલ: ${phone}%0Aમને ${service} માટે માહિતી જોઈએ છે.`;
+            window.open(`https://wa.me/917621947125?text=${text}`, '_blank');
+        }
+    </script>
 </body>
 </html>
+```eof
